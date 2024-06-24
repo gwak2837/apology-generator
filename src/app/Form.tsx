@@ -77,10 +77,16 @@ export default function Form() {
           </div>
         </div>
       ) : (
-        <form className="grid md:grid-cols-2 gap-4" onSubmit={updateSearchParams}>
-          <label>당사자</label> <input className="px-2 py-1 rounded" name="당사자" required />
-          <label>피해자</label> <input className="px-2 py-1 rounded" name="피해자" required />
-          <label>행위</label> <input className="px-2 py-1 rounded" name="행위" required />
+        <form
+          className="grid grid-cols-[auto_1fr] gap-4 max-w-prose mx-auto"
+          onSubmit={updateSearchParams}
+        >
+          <label>당사자</label>
+          <input className="px-2 py-1 rounded" name="당사자" required />
+          <label>피해자</label>
+          <input className="px-2 py-1 rounded" name="피해자" required />
+          <label>행위</label>
+          <input className="px-2 py-1 rounded" name="행위" required />
           <button className="col-span-2 border-2 bg-slate-100 rounded-lg px-4 py-2" type="submit">
             생성하기
           </button>
@@ -114,7 +120,7 @@ export function FormFallback() {
           생성하기
         </button>
       </form>
-      <div>
+      <div className="invisible">
         <p className="whitespace-pre-line py-4">{generateApology(당사자, 피해자, 행위)}</p>
         <div className="grid grid-cols-[auto_1fr_auto] gap-2">
           <button className={buttonStyle} disabled>

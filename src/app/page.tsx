@@ -3,7 +3,7 @@ import Form, { FormFallback } from './Form';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="min-h-screen items-center justify-between p-8 sm:p-16 md:p-32">
       <Suspense fallback={<FormFallback />}>
         <Form />
       </Suspense>
